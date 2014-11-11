@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <% welcome_username = 'Hi, ' + current_user.username + '!' %>
+      
   </head>
   <body>
     <div class="container">
@@ -23,6 +23,7 @@
               </button>
               <%= link_to "Blog & RoR", home_index_path, class: "navbar-brand" %>
               <% if user_signed_in? %>
+                <% welcome_username = 'Hi, ' + current_user.username + '!' %>
                 <div class="visible-xs-block" style="margin: 15px 75px" align="right">
                   <%= welcome_username %>
                 </div>
