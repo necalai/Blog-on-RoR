@@ -4,16 +4,17 @@
 <%= form_for :article, url: articles_path do |f| %>
 	<p>
 		<%= f.label :title %><br />
-		<%= f.text_field :title %>
+		<%= f.text_field :title, class: "form-control", placeholder: "Text input", style: "width: 400px" %>
 	</p>
 
 	<p>
 		<%= f.label :text %><br />
-		<%= f.text_area :text %>
+		<%= f.text_area :text, class: "form-control", rows: "6", style: "width: 400px" %>
 	</p>
 
 	<p>
-		<%= f.submit %>
+		<%= f.submit"Save Article", class: "btn btn-success"  %>
 	</p>
+
 
 <% end %>

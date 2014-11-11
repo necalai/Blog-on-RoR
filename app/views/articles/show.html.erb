@@ -24,11 +24,11 @@
 		<%= form_for([@article, @article.comments.build]) do |f| %>
 
 			<p>
-				<%= f.text_area :body %>
+				<%= f.text_area :body, class: "form-control", rows: "4", style: "width: 300px" %>
 			</p>
 
 			<p>
-				<%= f.submit %>
+				<%= f.submit"Add", class: "btn btn-success" %>
 			</p>
 		<% end %>
 	</p>
