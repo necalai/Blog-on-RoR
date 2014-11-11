@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <% welcome_username = 'Hi, ' + current_user.username + '!' %>
   </head>
   <body>
     <div class="container">
@@ -23,7 +24,7 @@
               <%= link_to "Blog & RoR", home_index_path, class: "navbar-brand" %>
               <% if user_signed_in? %>
                 <div class="visible-xs-block" style="margin: 15px 75px" align="right">
-                  <%= 'Hi, ' + current_user.username + '!' %>
+                  <%= welcome_username %>
                 </div>
               <% end %>
             </div>
@@ -37,7 +38,7 @@
                   <li><%= link_to "Sing In", new_user_session_path %></li>
                   <li><%= link_to "Sign Up", new_user_registration_path %></li>
                 <% else %>
-                  <li><div class="hidden-xs" style="margin-top: 15px"><%= 'Hi, ' + current_user.username + '!' %></div></li>
+                  <li><div class="hidden-xs" style="margin-top: 15px"><%= welcome_username %></div></li>
                   <li><%= link_to "Sing Out", destroy_user_session_path, method: :delete %></li>
                 <% end %>
               </ul>

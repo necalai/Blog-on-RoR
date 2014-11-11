@@ -5,6 +5,11 @@ class ApplicationController < ActionController::Base
 
     before_filter :configure_permitted_parameters, if: :devise_controller?
 
+    def show
+	    # @u = User.all
+	    @welcome_username = "Hi, "
+	end
+
     private
    
     def configure_permitted_parameters
