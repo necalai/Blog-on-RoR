@@ -35,7 +35,7 @@
               </ul>
               <ul class="nav navbar-nav navbar-right">
                 <% unless user_signed_in? %>
-                  <li><%= link_to "Sing In", new_user_session_path %></li>
+                  <li><%= link_to "Sign In", new_user_session_path %></li>
                   <li><%= link_to "Sign Up", new_user_registration_path %></li>
                 <% else %>
                   <li><div class="hidden-xs" style="margin-top: 15px"><%= welcome_username %></div></li>
