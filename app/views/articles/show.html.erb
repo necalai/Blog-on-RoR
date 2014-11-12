@@ -1,9 +1,13 @@
-<h2><%= @article.title %></h2>
+<h3><%= @article.title %></h3>
 <p>
 	<%= @article.text %>
+	<br />
+	<br />
+	<i>Create <%= @article.author %> at <%= @article.created_at %></i>
+	<hr/>
 </p>
 
-<h3>Comments</h3>
+<h4>Comments</h4>
 
 <% @article.comments.each do |comment| %>
 
